@@ -7,7 +7,7 @@ env.base_dir = '/usr/src/'
 env.domain = 'ryanjurgensen.com'
 env.dir = '/usr/src/%s' % (env.short_name)
 env.git = 'git@github.com:ryanjurgensen/freelance_django.git'
-env.hosts = ['ec2-50-112-37-104.us-west-2.compute.amazonaws.com ']
+env.hosts = ['ec2-50-112-37-104.us-west-2.compute.amazonaws.com']
 env.user = 'ubuntu'
 env.deploy_user = 'root'
 
@@ -65,9 +65,12 @@ def venv(command):
         sudo(env.venv + ' && ' + command, user=env.deploy_user)
 
 def install_prereqs():
-    sudo('apt-get install nginx python-setuptools git gcc python-dev upstart python-flup libmysqlclient-dev memcached')
+    sudo('apt-get update')
+    sudo('apt-get -y install nginx python-setuptools git gcc python-dev upstart python-flup libmysqlclient-dev memcached libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev')
+    sudo('ln -sf /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib')
+    sudo('ln -fs /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib')
+    sudo('ln -fs /usr/lib/x86_64-linux-gnu/libz.so /usr/lib')
     sudo('easy_install virtualenv')
-    sudo('pip install newrelic')
 
 def setup_virtualenv():
 	sudo('mkdir -p ' + env.venv_path, user=env.deploy_user)
@@ -98,7 +101,7 @@ def setup_servers():
         sudo('ln -sf ./configs/prod.py ./local_settings.py')
         venv('pip install -r requirements.txt')
         install_newrelic()
-    sudo('restart %s' % env.short_name)
+    sudo('start %s' % env.short_name)
 
 def genesis():
     install_prereqs()
