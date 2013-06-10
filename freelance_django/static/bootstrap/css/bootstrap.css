@@ -5626,171 +5626,125 @@ a.badge:hover {
   line-height: 30px;
   color: inherit;
 }
-#document {
-  padding: 10px;
-  margin-top: 30px;
-  overflow: visible;
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
-  background: #edeef1;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #edeef1), color-stop(22%, #ffffff), color-stop(78%, #ffffff), color-stop(100%, #edeef1));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* IE10+ */
-
-  background: linear-gradient(to right, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edeef1', endColorstr='#edeef1', GradientType=1);
-  /* IE6-9 */
-
-}
-.document {
-  padding: 10px;
-  margin-top: 30px;
-  overflow: visible;
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), inset 0 0 10px rgba(0, 0, 0, 0.03);
-  background: #edeef1;
-  /* Old browsers */
-
-  background: -moz-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* FF3.6+ */
-
-  background: -webkit-gradient(linear, left top, right top, color-stop(0%, #edeef1), color-stop(22%, #ffffff), color-stop(78%, #ffffff), color-stop(100%, #edeef1));
-  /* Chrome,Safari4+ */
-
-  background: -webkit-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* Chrome10+,Safari5.1+ */
-
-  background: -o-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* Opera 11.10+ */
-
-  background: -ms-linear-gradient(left, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* IE10+ */
-
-  background: linear-gradient(to right, #edeef1 0%, #ffffff 22%, #ffffff 78%, #edeef1 100%);
-  /* W3C */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#edeef1', endColorstr='#edeef1', GradientType=1);
-  /* IE6-9 */
-
-  margin-top: 0px;
-  position: absolute;
-  z-index: -666;
-  -webkit-transform: rotate(1deg);
-  -moz-transform: rotate(1deg);
-  -ms-transform: rotate(1deg);
-  -o-transform: rotate(1deg);
-  transform: rotate(1deg);
-  height: 800px;
-  top: 8px;
-}
-.document.bottom {
-  -webkit-transform: rotate(-2deg);
-  -moz-transform: rotate(-2deg);
-  -ms-transform: rotate(-2deg);
-  -o-transform: rotate(-2deg);
-  transform: rotate(-2deg);
-  height: 900px;
-  top: -13px;
-  z-index: -667;
-}
 body {
-  background: url(../img/office.png);
+  background: url(../img/textured_stripes.png);
 }
-h1,
-h2 {
-  font-family: "mono45-headline", sans-serif;
-  font-size: 40px;
-  font-style: normal;
-  font-weight: 500;
-}
-h2 {
-  font-size: 50px;
-}
-.btn-danger {
-  font-family: "mono45-headline", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 36px;
-  margin-bottom: 10px;
-  padding: 10px 90px;
-  -webkit-box-shadow: 0px 0px 2px 1px #CB423C;
-  box-shadow: 0px 0px 2px 1px #CB423C;
-  text-shadow: 0 0 4px #ff0000;
-  -webkit-animation-name: glow;
-  -webkit-animation-duration: 3s;
-  -webkit-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-}
-.name {
-  position: relative;
-}
-.name .l {
-  text-align: right;
-}
-#ny-filter {
-  -webkit-transform: rotate(8deg);
-  -moz-transform: rotate(8deg);
-  -ms-transform: rotate(8deg);
-  -o-transform: rotate(8deg);
-  transform: rotate(8deg);
-  -webkit-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  -moz-box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  position: absolute;
-  right: -40px;
-  top: 0px;
-}
-#qr {
-  position: absolute;
-  left: 10px;
-  top: 72px;
-  width: 90px;
-}
-.info {
-  border-top: 1px solid #000;
-}
-.info .span3,
-.info .span4 {
-  border-right: 1px solid #000;
-}
-.info .offLabel {
-  font-family: "mono45-headline", sans-serif;
+.navbar a {
+  font-family: "museo-sans", sans-serif;
+  text-transform: uppercase;
   font-size: 16px;
 }
-.info .check {
-  width: 20px;
-  height: 20px;
+#main {
+  background-color: white;
+  position: relative;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
+  margin-top: 50px;
+  padding: 10px;
 }
-.info div p img {
-  display: none;
+#main h1 {
+  color: #de5a49;
+  font-size: 52px;
 }
-.info div p span:not(.always):not(.offLabel) {
-  display: none;
+h2.section {
+  font-size: 45px;
+  margin-top: 45px;
+  text-transform: uppercase;
 }
-.bottom {
-  border-bottom: 1px solid black;
+#portrait {
+  float: right;
 }
-#priors img {
+.intro {
+  line-height: 42px;
+  font-family: "museo-sans", sans-serif;
+  font-size: 32px;
+}
+.intro .name {
+  color: #de5a49;
+  font-size: 40px;
+}
+.intro .name,
+.intro .title {
+  font-weight: bold;
+}
+.mid-intro {
+  margin-top: 25px;
+  font-family: "museo-sans", sans-serif;
+  font-size: 24px;
+  line-height: 32px;
+}
+#skills img {
+  max-height: 150px;
+}
+#skills-table th {
   cursor: pointer;
 }
-#priors img.span2 {
+#foursquare-container {
+  height: 640px;
+  position: relative;
+  width: 640px;
+}
+#foursquare-container .tl {
+  top: 0px;
+  left: 0px;
+  background-color: #DE5A49;
+}
+#foursquare-container .tr {
+  top: 0px;
+  right: 0px;
+  background-color: #DE9349;
+}
+#foursquare-container .bl {
+  bottom: 0px;
+  left: 0px;
+  background-color: #307889;
+}
+#foursquare-container .br {
+  bottom: 0px;
+  right: 0px;
+  background-color: #37A654;
+}
+.foursquare {
+  width: 300px;
+  height: 300px;
+  margin: 5px;
+  position: absolute;
+  cursor: pointer;
+  padding: 5px;
+}
+.foursquare h2,
+.foursquare p {
+  color: white;
+}
+.foursquare h2 {
+  text-align: center;
+}
+.foursquare.big .rm {
+  display: none;
+}
+.foursquare.big .m {
+  display: block;
+}
+.foursquare .m {
+  display: none;
+}
+.foursquare .rm {
+  font-weight: bold;
+}
+.gist {
+  display: none;
+}
+#gist-hover {
+  cursor: pointer;
+}
+#skills-row {
+  display: none;
+}
+#portfolio img {
+  cursor: pointer;
+}
+#portfolio img.span2 {
   height: 113px;
 }
 .tags {
@@ -5805,9 +5759,6 @@ h2 {
   -moz-border-radius: 5px;
   border-radius: 5px;
   margin-top: 5px;
-}
-.job {
-  margin-top: 10px;
 }
 .tile {
   position: relative;
@@ -5835,7 +5786,6 @@ h2 {
   width: 100%;
   cursor: pointer;
   text-align: center;
-  font-family: "mono45-headline", sans-serif;
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -5847,8 +5797,9 @@ h2 {
 .tile .desc {
   display: none;
 }
-#skills thead th {
-  cursor: pointer;
+.portfolioLink {
+  font-size: 24px;
+  color: #307889;
 }
 /*!
  * Bootstrap Responsive v2.1.1

@@ -1,0 +1,6 @@
+html body#tinymce.mceContentBody{
+	background-color: white;
+	font-size: 19px;
+	line-height: 24px;
+	padding: 10px !important;
+}

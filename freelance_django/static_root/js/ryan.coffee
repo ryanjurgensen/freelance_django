@@ -83,8 +83,6 @@ $(document).ready () ->
 		_gaq.push(['_trackEvent', 'Foursquare', 'Existing Tech Teams']);
 		return
 
-
-
 	return
 
 
