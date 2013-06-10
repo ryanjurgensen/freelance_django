@@ -12,8 +12,7 @@ env.user = 'ubuntu'
 env.deploy_user = 'root'
 
 upstart_file = """
-env NEW_RELIC_CONFIG_FILE=%s/newrelic.ini
-exec newrelic-admin run-program uwsgi \
+exec uwsgi \
 --uid=root \
 --home=/root/.virtualenvs/freelance_django \
 --pythonpath=/usr/src/freelance_django \
