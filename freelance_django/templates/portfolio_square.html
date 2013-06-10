@@ -1,0 +1,13 @@
+{% load thumbnail %}
+<div class="span4 tile">
+	{% thumbnail square.image "370x230" as image %}
+     	<img src="{{ image.url }}">
+    {% endthumbnail %}
+	<div class="blk-label"> 
+		<label>{{ square.title }}</label>
+	</div>
+	<div class="desc">
+			<p>Responsibilities: {{ square.responsibilities }}</p>
+			{{ square.description|safe }}
+	</div>
+</div>

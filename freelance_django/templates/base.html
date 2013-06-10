@@ -2,16 +2,40 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<script type="text/javascript" src="{% static 'js/analytics.min.js' %}"></script>
-		<script type="text/javascript" src="{{ STATIC_URL }}js/ga.js"></script>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<script type="text/javascript">
-			var csrf = '{{csrf_token}}';
-		</script>
+		<meta name="description" content="Ryan is a freelance web developer based in Portland, OR building awesome Python apps for businesses, startups, and agencies. ">
+		{% if page_title %}
+			<title>{{ page_title }}</title>
+		{% else %}
+			<title>Ryan Jurgensen - Freelance Web Developer</title>
+		{% endif %}
+
+		<link rel="stylesheet" type="text/css" href="{% static 'css/ryan.css' %}">
+		<link rel="author" href="https://plus.google.com/111862361789998379452"/>
+
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/ryan.js' %}"></script>
+		<script type="text/javascript" src="//use.typekit.net/dbq7lij.js"></script>
+		<script type="text/javascript">var csrf = '{{csrf_token}}';</script>
+
 		{% block head %}{% endblock %}
 	</head>
-	<body data-role="none">
-		<div id="content" class="container">
+	<body data-spy="scroll" data-target=".navbar">
+		<div class="navbar navbar-fixed-top">
+			<div class="navbar-inner">
+				<div class="container">  
+					<ul class="nav pull-right">
+					<li class="active hidden-phone"><a href="#about">About</a></li>
+					<li><a href="#skills">Skills</a></li>
+					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#contact">Contact</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div id="main" class="container">
 			{% if messages %}
 				{% for message in messages %}
 					<div class="alert {{ message.tags }}">
@@ -22,5 +46,8 @@
 			{% endif %}
 			{% block body %}{% endblock %}
 		</div>
+		<script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/analytics.min.js' %}"></script>
+		<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100622594ns.gif" /></p></noscript>
 	</body>
 </html>
