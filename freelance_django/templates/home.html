@@ -1,1 +1,29 @@
 {% extends "base.html" %}
+
+{% block body %}
+	<img id="portrait" src="{{ STATIC_URL }}img/me-small.png" width="270">
+	<p id="about" class="intro">Hi! I'm <span class="name">Ryan Jurgensen</span>, a <span class="title">freelance web developer</span> based in <span class="location">Portland, Oregon</span>. </p>
+	
+	<p class="mid-intro">I build everything from simple websites to entire social networks. I am a full stack developer, so I'm at home doing frontend, backend, or devops.</p>
+	
+	<p class="mid-intro">I have been freelancing for over 5 years and earned my computer science degree from The University of Texas at Austin - a top 10 Computer Science school. </p>
+
+	<div id="portfolio" class="row">
+		<h2 class="section span12" style="color: #307889">Recent Work</h2>
+		{% for square in portfolio_items %}
+			{% include "portfolio_square.html" %}
+		{% endfor %}
+	</div>
+
+	<div class="modal hide" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
+		<div class="modal-header">
+			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			<h3 id="modalLabel"></h3>
+		</div>
+		<div class="modal-body"></div>
+		<div class="modal-footer">
+			<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+		</div>
+	</div>
+
+{% endblock %}

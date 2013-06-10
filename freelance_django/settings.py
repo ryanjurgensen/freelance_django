@@ -127,7 +127,11 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'gitrevision',
     'freelance_django',
+    'grappelli',
     'django.contrib.admin',
+    'sorl.thumbnail',
+    'south',
+
 )
 
 # A sample logging configuration. The only tangible logging
