@@ -14,6 +14,12 @@ framework.
 
 """
 import os
+try:
+	import newrelic.agent
+	newrelic.agent.initialize('/usr/src/freelance_django/newrelic.ini')
+except Exception, e:
+	print e
+
 
 # We defer to a DJANGO_SETTINGS_MODULE already in the environment. This breaks
 # if running multiple sites in the same mod_wsgi process. To fix this, use
@@ -26,6 +32,10 @@ os.environ.setdefault("DJANGO_SETTINGS_MODULE", "freelance_django.settings")
 # setting points here.
 from django.core.wsgi import get_wsgi_application
 application = get_wsgi_application()
+try:
+	application = newrelic.agent.wsgi_application()(application)
+except Exception, e:
+	print e
 
 # Apply WSGI middleware here.
 # from helloworld.wsgi import HelloWorldApplication
