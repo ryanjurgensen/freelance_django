@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils.text import slugify
 
 class PortfolioTag(models.Model):
     title = models.CharField(max_length=255)
@@ -9,6 +10,22 @@ class PortfolioTag(models.Model):
     @staticmethod
     def autocomplete_search_fields():
         return ("id__iexact", "title__icontains",)
+
+class ContentItem(models.Model):
+    title = models.CharField(max_length=255)
+    content = models.TextField()
+    created = models.DateTimeField(auto_now_add=True)
+    slug = models.SlugField()
+    is_landing = models.BooleanField(default=False)
+    is_blog = models.BooleanField(default=True)
+
+    class Meta:
+        ordering = ('-created',)
+
+    def save(self, *args, **kwargs):
+        self.slug = slugify(self.title)
+        super(ContentItem, self).save()
+
 
 class PortfolioItem(models.Model):
     title = models.CharField(max_length=255)

@@ -1,6 +1,15 @@
 from django.contrib import admin
 from .models import *
 
+class ContentItemAdmin(admin.ModelAdmin):
+    exclude = ('slug',)
+    list_display = ('title','slug', 'created', 'is_blog', 'is_landing') 
+    class Media:
+        js = (
+            '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
+            '/static/js/tinymce_setup.js',
+        )
+
 class PortfolioItemAdmin(admin.ModelAdmin):
     sortable_field_name = "position"
     raw_id_fields = ('tags',)
@@ -24,3 +33,4 @@ class PortfolioItemAdmin(admin.ModelAdmin):
 
 admin.site.register(PortfolioTag)
 admin.site.register(PortfolioItem, PortfolioItemAdmin)
+admin.site.register(ContentItem, ContentItemAdmin)
