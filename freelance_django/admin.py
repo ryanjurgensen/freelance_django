@@ -3,7 +3,7 @@ from .models import *
 
 class ContentItemAdmin(admin.ModelAdmin):
     exclude = ('slug',)
-    list_display = ('title','slug', 'created', 'is_blog', 'is_landing') 
+    list_display = ('title','slug', 'created', 'is_blog', 'is_landing', 'perfect') 
     class Media:
         js = (
             '/static/grappelli/tinymce/jscripts/tiny_mce/tiny_mce.js',
