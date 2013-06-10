@@ -67,20 +67,8 @@ $(document).ready () ->
 		_gaq.push(['_trackEvent', 'Portfolio', title]);
 		return
 
-	$('.websites').click (e) ->
-		_gaq.push(['_trackEvent', 'Foursquare', 'Websites']);
-		return
-
-	$('.agencies').click (e) ->
-		_gaq.push(['_trackEvent', 'Foursquare', 'Agencies']);
-		return
-
-	$('.startups').click (e) ->
-		_gaq.push(['_trackEvent', 'Foursquare', 'Startups']);
-		return
-
-	$('.tech').click (e) ->
-		_gaq.push(['_trackEvent', 'Foursquare', 'Existing Tech Teams']);
+	$('#freeOfficeButton').click (e) ->
+		_gaq.push(['_trackEvent', 'Buttons', 'Office Hours']);
 		return
 
 	return
