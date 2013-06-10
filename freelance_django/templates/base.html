@@ -33,6 +33,12 @@
 					<li><a href="#skills">Skills</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
 					<li><a href="#contact">Contact</a></li>
+					<li>
+						<button class="btn btn-warning">Hire Me</button>
+					</li>
+					<li>
+						<button id="freeOfficeButton" class="btn btn-success" data-toggle="modal" data-target="#freeOffice">Free Office Hours!</button>
+					</li>
 					</ul>
 				</div>
 			</div>
@@ -48,6 +54,21 @@
 			{% endif %}
 			{% block body %}{% endblock %}
 		</div>
+
+		<div class="modal hide" id="freeOffice" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="modalLabel">Ask me anything!</h3>
+			</div>
+			<div class="modal-body">
+				<p>Have questions about where to start with your web startup? Want to chat about scaling your current webapp? Let's talk!</p>
+				<p>Shoot me an email at <a href="mailto:ryan.jurgensen@gmail.com">ryan.jurgensen@gmail.com</a> and let's setup a time to Skype. Live in <strong>Portland</strong>? Let's grab coffee!</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+
 		<script src="{% static 'js/jquery.tablesorter.min.js' %}"></script>
 		<script type="text/javascript" src="{% static 'js/analytics.min.js' %}"></script>
 		<noscript><p><img alt="Clicky" width="1" height="1" src="//in.getclicky.com/100622594ns.gif" /></p></noscript>

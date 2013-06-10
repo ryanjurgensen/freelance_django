@@ -16,7 +16,24 @@
 		<a href="{% url 'portfolio' %}" class="portfolioLink pull-right">Hey, there's {{ total_portfolio_count }} more! &#8594;</a>
 	</div>
 
+	<h2 class="section" style="color: #DE5A49">Skills</h2>
+	<p>I have a verbose background ranging from basic assembly all the way to CSS. But, my current niche is <strong>scalable Python web development with Django on Amazon Web Services (AWS)</strong>. My go-to setup (assuming it is appropriate for the project) is:</p>
+	<ul>
+		<li>Python and Django</li>
+		<li>LESS</li>
+		<li>CoffeeScript</li>
+		<li>jQuery</li>
+		<li>AWS EC2 instances with an ELB</li>
+		<li>AWS S3 and CloudFront for static assets</li>
+		<li>Fabric for multi-instance deployments</li>
+		<li>Git for source control management</li>
+		<li>MySQL (AWS RDS possible)</li>
+		<li>memcached</li>
+		<li>New Relic and other profiling tools for Django</li>
+	</ul>
 
+	<p>This is the setup I've been using and perfecting in the last 2+ years. I've worked with a fair amount of other technologies too, and would revisit them on the right project. <a href="#skills-row" id="show-table">Show full skill list.</a></p>
+	{% include 'skill_list.html' %}
 	<div class="modal hide" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-header">
 			<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
