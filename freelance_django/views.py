@@ -30,7 +30,7 @@ class ContentView(TemplateView):
 
 class ContentListView(ListView):
 	model = ContentItem
+	queryset = ContentItem.objects.filter(is_blog=True)
 	template_name = "content_list.html"
 	context_object_name = "content_list"
 	paginate_by = 10
-	

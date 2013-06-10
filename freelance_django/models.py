@@ -18,6 +18,7 @@ class ContentItem(models.Model):
     slug = models.SlugField()
     is_landing = models.BooleanField(default=False)
     is_blog = models.BooleanField(default=True)
+    perfect = models.BooleanField(default=False)
 
     class Meta:
         ordering = ('-created',)
