@@ -66,11 +66,12 @@ def venv(command):
 
 def install_prereqs():
     sudo('apt-get update')
-    sudo('apt-get -y install nginx python-setuptools git gcc python-dev upstart python-flup libmysqlclient-dev memcached libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev')
+    sudo('apt-get -y install nginx python-setuptools git gcc python-dev upstart python-pip python-flup libmysqlclient-dev memcached libjpeg-dev libfreetype6 libfreetype6-dev zlib1g-dev')
     sudo('ln -sf /usr/lib/x86_64-linux-gnu/libjpeg.so /usr/lib')
     sudo('ln -fs /usr/lib/x86_64-linux-gnu/libfreetype.so /usr/lib')
     sudo('ln -fs /usr/lib/x86_64-linux-gnu/libz.so /usr/lib')
     sudo('easy_install virtualenv')
+    sudo('pip install newrelic')
 
 def setup_virtualenv():
 	sudo('mkdir -p ' + env.venv_path, user=env.deploy_user)
@@ -85,9 +86,8 @@ def get_project():
 def install_newrelic():
     print 'Installing newrelic'
     with cd(env.dir):
-        venv('newrelic-admin generate-config b57fa342a913717b243fc04ba7044dd49d86ba04 newrelic.ini')
-        sudo('NEW_RELIC_CONFIG_FILE=%s/newrelic.ini' % env.dir)
-        sudo('export NEW_RELIC_CONFIG_FILE')
+        venv('newrelic-admin generate-config 08ab74aada5044c2635aa63866e61feb6bde25b5 newrelic.ini')
+        sudo('export NEW_RELIC_CONFIG_FILE=%s/newrelic.ini' % env.dir)
 
 def setup_servers():
     venv('pip install uwsgi')
