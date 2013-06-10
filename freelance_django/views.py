@@ -1,4 +1,6 @@
 from django.views.generic.base import TemplateView, View
+from django.views.generic import ListView
+from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
 
 class HomeView(TemplateView):
@@ -17,3 +19,18 @@ class PortfolioView(TemplateView):
 		context = super(PortfolioView, self).get_context_data(**kwargs)
 		context['portfolio_items'] = PortfolioItem.objects.all()
 		return context
+
+class ContentView(TemplateView):
+	template_name = "content_item.html"
+
+	def get_context_data(self, slug, **kwargs):
+		context = super(ContentView, self).get_context_data(**kwargs)
+		context['content'] = get_object_or_404(ContentItem, slug=slug)
+		return context
+
+class ContentListView(ListView):
+	model = ContentItem
+	template_name = "content_list.html"
+	context_object_name = "content_list"
+	paginate_by = 10
+	

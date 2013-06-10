@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block body %}
+	<div class="">
+		{% for item in content_list %}
+			<div class="blogListItem">
+				<h3>
+					<a href="{% url 'content' slug=item.slug %}">{{ item.title }}</a>
+				</h3>
+				<small>{{ item.created }}</small>
+				{{ item.content|truncatewords:140|safe }}
+				<a href="{% url 'content' slug=item.slug %}">Read More &#8594;</a>
+				<hr>
+			</div>
+		{% endfor %}
+	</div>
+{% endblock %}
