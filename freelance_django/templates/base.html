@@ -11,8 +11,10 @@
 			<title>Ryan Jurgensen - Freelance Web Developer</title>
 		{% endif %}
 
+		{% if blog_post %}
+			<link rel="author" href="https://plus.google.com/111862361789998379452"/>
+		{% endif %}
 		<link rel="stylesheet" type="text/css" href="{% static 'css/ryan.css' %}">
-		<link rel="author" href="https://plus.google.com/111862361789998379452"/>
 
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 		<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
@@ -30,8 +32,8 @@
 					<a href="{% url 'home' %}" class="brand">Ryan Jurgensen</a>
 					<ul class="nav pull-right">
 					<li class="active hidden-phone"><a href="#about">About</a></li>
-					<li><a href="#skills">Skills</a></li>
 					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="#skills">Skills</a></li>
 					<li><a href="#contact">Contact</a></li>
 					<li>
 						<button class="btn btn-warning">Hire Me</button>
