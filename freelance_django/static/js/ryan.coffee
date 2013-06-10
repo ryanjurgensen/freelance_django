@@ -71,6 +71,10 @@ $(document).ready () ->
 		_gaq.push(['_trackEvent', 'Buttons', 'Office Hours']);
 		return
 
+	$('#hireBtn').click (e) ->
+		_gaq.push(['_trackEvent', 'Buttons', 'Hire']);
+		return
+
 	return
 
 

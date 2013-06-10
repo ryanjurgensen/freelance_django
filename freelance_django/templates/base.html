@@ -24,19 +24,18 @@
 
 		{% block head %}{% endblock %}
 	</head>
-	<body data-spy="scroll" data-target=".navbar">
+	<body>
 		<div class="navbar navbar-fixed-top">
 			<div class="navbar-inner">
 
 				<div class="container">  
 					<a href="{% url 'home' %}" class="brand">Ryan Jurgensen</a>
 					<ul class="nav pull-right">
-					<li class="active hidden-phone"><a href="#about">About</a></li>
-					<li><a href="#portfolio">Portfolio</a></li>
+					<li><a href="{% url 'portfolio' %}">Portfolio</a></li>
 					<li><a href="#skills">Skills</a></li>
-					<li><a href="#contact">Contact</a></li>
+					<li><a href="/#contact">Contact</a></li>
 					<li>
-						<button class="btn btn-warning">Hire Me</button>
+						<button id="hireBtn" class="btn btn-warning" data-toggle="modal" data-target="#hire">Hire Me</button>
 					</li>
 					<li>
 						<button id="freeOfficeButton" class="btn btn-success" data-toggle="modal" data-target="#freeOffice">Free Office Hours!</button>
@@ -64,6 +63,20 @@
 			</div>
 			<div class="modal-body">
 				<p>Have questions about where to start with your web startup? Want to chat about scaling your current webapp? Let's talk!</p>
+				<p>Shoot me an email at <a href="mailto:ryan.jurgensen@gmail.com">ryan.jurgensen@gmail.com</a> and let's setup a time to Skype. Live in <strong>Portland</strong>? Let's grab coffee!</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn" data-dismiss="modal" aria-hidden="true">Close</button>
+			</div>
+		</div>
+
+		<div class="modal hide" id="hire" tabindex="-1" role="dialog" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h3 id="modalLabel">Let's work together!</h3>
+			</div>
+			<div class="modal-body">
+				<p>I love working on new projects and would be delighted to talk about yours.</p>
 				<p>Shoot me an email at <a href="mailto:ryan.jurgensen@gmail.com">ryan.jurgensen@gmail.com</a> and let's setup a time to Skype. Live in <strong>Portland</strong>? Let's grab coffee!</p>
 			</div>
 			<div class="modal-footer">
