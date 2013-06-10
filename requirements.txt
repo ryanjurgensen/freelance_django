@@ -1,0 +1,10 @@
+django >= 1.5.0
+south
+MySQL-python
+fabric
+PIL
+django-grappelli
+pyparsing==1.5.7
+sorl-thumbnail
+newrelic
+django-gitrevision

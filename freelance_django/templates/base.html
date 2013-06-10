@@ -1,0 +1,25 @@
+{% load statics %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		{% static 'freelance.js' %}
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<script type="text/javascript">
+			var csrf = '{{csrf_token}}';
+		</script>
+		{% block head %}{% endblock %}
+	</head>
+	<body data-role="none">
+		<div id="content" class="container">
+			{% if messages %}
+				{% for message in messages %}
+					<div class="alert {{ message.tags }}">
+						<button type="button" class="close" data-dismiss="alert">&times;</button>
+						{{ message|safe }}
+					</div>
+				{% endfor %}
+			{% endif %}
+			{% block body %}{% endblock %}
+		</div>
+	</body>
+</html>
