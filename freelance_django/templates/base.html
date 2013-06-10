@@ -2,7 +2,8 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		{% static 'freelance.js' %}
+		<script type="text/javascript" src="{% static 'js/analytics.min.js' %}"></script>
+		<script type="text/javascript" src="{{ STATIC_URL }}js/ga.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<script type="text/javascript">
 			var csrf = '{{csrf_token}}';
