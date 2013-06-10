@@ -1,4 +1,4 @@
-from dynamo.settings import *
+from freelance_django.settings import *
 import os
 
 DEBUG = True

@@ -112,7 +112,7 @@ def genesis():
 def restart():
     print 'Restarting uWSGI'
     with settings(hide('warnings', 'running', 'stdout', 'stderr')):
-        sudo('restart dynamo')
+        sudo('restart freelance_django')
 
 def deploy(tag='master'):
     env.hosts_complete = 0
