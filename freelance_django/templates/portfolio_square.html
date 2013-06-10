@@ -7,7 +7,12 @@
 		<label>{{ square.title }}</label>
 	</div>
 	<div class="desc">
-			<p>Responsibilities: {{ square.responsibilities }}</p>
-			{{ square.description|safe }}
+		<p>Responsibilities: {{ square.responsibilities }}</p>
+		{{ square.description|safe }}
+		<ul class="tags">
+			{% for tag in square.tags.all %}
+				<li>{{ tag.title }}</li>
+			{% endfor %}
+		</ul>
 	</div>
 </div>

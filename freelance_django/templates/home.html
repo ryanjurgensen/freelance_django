@@ -13,7 +13,9 @@
 		{% for square in portfolio_items %}
 			{% include "portfolio_square.html" %}
 		{% endfor %}
+		<a href="{% url 'portfolio' %}" class="portfolioLink pull-right">Hey, there's {{ total_portfolio_count }} more! &#8594;</a>
 	</div>
+
 
 	<div class="modal hide" id="portfolioModal" tabindex="-1" role="dialog" aria-hidden="true">
 		<div class="modal-header">
