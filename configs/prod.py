@@ -18,6 +18,13 @@ DATABASES = {
     }
 }
 
+TEMPLATE_LOADERS = (  
+    ('django.template.loaders.cached.Loader', (  
+        'django.template.loaders.filesystem.Loader',  
+        'django.template.loaders.app_directories.Loader',  
+    )),  
+)
+
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static_root/')
 STATIC_URL = '/static/'
 
@@ -26,4 +33,6 @@ AWS_ACCESS_KEY_ID = '03SM3GWBJ6CWNA8Q7AR2'
 AWS_SECRET_ACCESS_KEY = 'ps5dGzgaua+4FattqhvZgrVnskyE1jyyfG+gl+iA'
 AWS_STORAGE_BUCKET_NAME = 'freelancedjango'
 MEDIA_URL = 'http://cdn.ryanjurgensen.com/'
+
+
 
