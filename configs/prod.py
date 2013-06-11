@@ -23,7 +23,7 @@ STATIC_URL = '/static/'
 
 DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
 AWS_ACCESS_KEY_ID = '03SM3GWBJ6CWNA8Q7AR2'
-AWS_SECRET_ACCESS_KEY = 'e+ps5dGzgaua+4FattqhvZgrVnskyE1jyyfG+gl+iA'
-AWS_STORAGE_BUCKET_NAME = 'ryanjurgensen'
+AWS_SECRET_ACCESS_KEY = 'ps5dGzgaua+4FattqhvZgrVnskyE1jyyfG+gl+iA'
+AWS_STORAGE_BUCKET_NAME = 'freelancedjango'
 MEDIA_URL = 'http://cdn.ryanjurgensen.com/'
 
