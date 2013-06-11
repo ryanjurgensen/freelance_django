@@ -133,7 +133,8 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     'sorl.thumbnail',
     'south',
-
+    'storages',
+    'boto',
 )
 
 # A sample logging configuration. The only tangible logging

@@ -21,6 +21,9 @@ DATABASES = {
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static_root/')
 STATIC_URL = '/static/'
 
-MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media/')
-MEDIA_URL = '/media/'
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = '03SM3GWBJ6CWNA8Q7AR2'
+AWS_SECRET_ACCESS_KEY = 'e+ps5dGzgaua+4FattqhvZgrVnskyE1jyyfG+gl+iA'
+AWS_STORAGE_BUCKET_NAME = 'ryanjurgensen'
+MEDIA_URL = 'http://cdn.ryanjurgensen.com/'
 
