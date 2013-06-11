@@ -1,7 +1,7 @@
 from django.conf.urls import patterns, include, url
 from freelance_django.views import *
 from settings import *
-
+from django.http import HttpResponse
 from django.contrib import admin
 admin.autodiscover()
 
@@ -12,6 +12,8 @@ urlpatterns = patterns('',
     url(r'^grappelli/', include('grappelli.urls')),
     url(r'^media/(?P<path>.*)$', 'django.views.static.serve', {'document_root': MEDIA_ROOT,}),
     url(r'^blog/$', ContentListView.as_view(), name='blog_listing'),
+    url(r'^mu-ddc4496d-5d1fac34-63470606-c512ee3f', blitz),
+    
     url(r'^(?P<slug>\S+)$', ContentView.as_view(), name='content'),
 )
 

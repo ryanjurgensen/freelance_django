@@ -2,6 +2,7 @@ from django.views.generic.base import TemplateView, View
 from django.views.generic import ListView
 from django.shortcuts import render, redirect, get_object_or_404
 from .models import *
+from django.http import HttpResponse
 
 class HomeView(TemplateView):
 	template_name = "home.html"
@@ -34,3 +35,6 @@ class ContentListView(ListView):
 	template_name = "content_list.html"
 	context_object_name = "content_list"
 	paginate_by = 10
+
+def blitz(request):
+	return HttpResponse('42')
