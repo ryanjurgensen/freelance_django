@@ -90,7 +90,7 @@ def install_newrelic():
 
 def setup_servers():
     venv('pip install uwsgi')
-    upstart = upstart_file % (env.dir)
+    upstart = upstart_file
     sudo('echo "%s" > /etc/init/%s.conf' % (upstart, env.short_name), user=env.deploy_user)
 
     sudo('echo "%s" > /etc/nginx/sites-available/%s.conf' % (nginx_file, env.short_name), user=env.deploy_user)
