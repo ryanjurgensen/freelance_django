@@ -77,4 +77,24 @@ $(document).ready () ->
 
 	return
 
+	$('.veteranButton').click (e) ->
+		btn =  $($(this).siblings('.veteranImageInput')[0])
+		e.preventDefault();
 
+		if meta_image_frame
+			meta_image_frame.open();	
+			return
+
+		meta_image_frame = wp.media.frames.meta_image_frame = wp.media({
+		title: meta_image.title,
+		button: { text:  meta_image.button },
+		library: { type: 'image' }
+		})
+
+		meta_image_frame.on 'select', do (btn, meta_image_frame) ->
+			media_attachment = meta_image_frame.state().get('selection').first().toJSON()
+			btn.val(media_attachment.url)
+			return
+
+		meta_image_frame.open()
+		return

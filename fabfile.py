@@ -7,7 +7,7 @@ env.base_dir = '/usr/src/'
 env.domain = 'ryanjurgensen.com'
 env.dir = '/usr/src/%s' % (env.short_name)
 env.git = 'git@github.com:ryanjurgensen/freelance_django.git'
-env.hosts = ['ec2-50-112-37-104.us-west-2.compute.amazonaws.com']
+env.hosts = ['ec2-50-112-37-104.us-west-2.compute.amazonaws.com', 'ec2-54-218-237-11.us-west-2.compute.amazonaws.com']
 env.user = 'ubuntu'
 env.deploy_user = 'root'
 
@@ -110,8 +110,10 @@ def genesis():
 
 def restart():
     print 'Restarting uWSGI'
-    with settings(hide('warnings', 'running', 'stdout', 'stderr')):
+    with settings(warn_only=True):
+        sudo('start freelance_django')
         sudo('restart freelance_django')
+
 
 def deploy(tag='master'):
     env.hosts_complete = 0
