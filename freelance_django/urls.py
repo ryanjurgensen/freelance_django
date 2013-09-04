@@ -1,7 +1,6 @@
 from django.conf.urls import patterns, include, url
 from freelance_django.views import *
 from settings import *
-
 from django.contrib import admin
 admin.autodiscover()
 

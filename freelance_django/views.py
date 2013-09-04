@@ -1,7 +1,7 @@
 from django.views.generic.base import TemplateView, View
 from django.views.generic import ListView
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import *
+from .models import PortfolioItem, ContentItem
 
 class HomeView(TemplateView):
 	template_name = "home.html"

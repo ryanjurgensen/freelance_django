@@ -4,24 +4,21 @@ import os
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 THUMBNAIL_DEBUG = True
-
 DEV = True
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': 'freelance',                      # Or path to database file if using sqlite3.
-        'USER': 'root',                      # Not used with sqlite3.
-        'PASSWORD': 'root',                  # Not used with sqlite3.
-        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'freelance',                 
+        'USER': 'root',                      
+        'PASSWORD': 'root',               
+        'HOST': '/Applications/MAMP/tmp/mysql/mysql.sock', 
+        'PORT': '', 
     }
 }
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static_root/')
 STATIC_URL = '/static/'
-
-
 MEDIA_ROOT = os.path.join(PROJECT_ROOT, 'media/')
 MEDIA_URL = '/media/'
 

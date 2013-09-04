@@ -11,6 +11,7 @@ class PortfolioTag(models.Model):
     def autocomplete_search_fields():
         return ("id__iexact", "title__icontains",)
 
+
 class ContentItem(models.Model):
     title = models.CharField(max_length=255)
     content = models.TextField()
