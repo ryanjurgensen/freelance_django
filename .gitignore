@@ -4,3 +4,4 @@
 local_settings.py
 
 /freelance_django/sqllog.txt
+.DS_Store

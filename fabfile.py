@@ -7,7 +7,7 @@ env.base_dir = '/usr/src/'
 env.domain = 'ryanjurgensen.com'
 env.dir = '/usr/src/%s' % (env.short_name)
 env.git = 'git@github.com:ryanjurgensen/freelance_django.git'
-env.hosts = ['ec2-50-112-37-104.us-west-2.compute.amazonaws.com', 'ec2-54-218-237-11.us-west-2.compute.amazonaws.com']
+env.hosts = ['ec2-50-112-37-104.us-west-2.compute.amazonaws.com']
 env.user = 'ubuntu'
 env.deploy_user = 'root'
 
