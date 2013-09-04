@@ -2,5 +2,5 @@
 *.pot
 *.pyc
 local_settings.py
-
+/freelance_django/static_root
 /freelance_django/sqllog.txt
